@@ -6,7 +6,7 @@ RESET AND GENERAL PAGE STYLES
 
 html { box-sizing: border-box; height: 100%, width: 100%; }
 
-body { position: relative; font: 400 16px/16px sans-serif; }
+body { position: relative; font: 400 16px/16px Lato; }
 
 li { list-style: none; }
 
@@ -116,12 +116,17 @@ CONTAINER MAIN BODY
 BG-1 UL CONTENT
 \*==============================*/
 
+.bg-1-navbar {
+	position: fixed;
+	width: inherit;
+	z-index: 110;
+}
+
 .phone,
 .social {
 	color: #fff;
 	line-height: 44px;
 	position: relative;
-	z-index: 110;
 }
 
 .phone li,
@@ -135,11 +140,9 @@ BG-1 UL CONTENT
 
 .phone li { padding-right: 24px; }
 
-.social {
-	float: right;
-}
+.social { float: right; }
 
-.fa-search {
+.social .fa-search {
 	position: absolute;
 	left: 6px;
 	transform: translateY(85%);
@@ -168,11 +171,13 @@ HEADER PRIMARY PAGE NAVIGATION
 
 .site-nav {
 	height: 120px;
-	position: relative;
+	position: fixed;
+	top: 44px;
+	width: inherit;
 	z-index: 110;
 }
 
-.site-nav-logo { position: relative; }
+.site-nav-logo { position: fixed; }
 
 .site-nav h1 {
 	color: #3c4c5d;
@@ -181,7 +186,7 @@ HEADER PRIMARY PAGE NAVIGATION
 	font-weight: 300;
 	float: left;
 	letter-spacing: -.1em;
-	line-height: 120px;
+	line-height: 118px;
 	text-transform: uppercase;
 }
 
@@ -196,16 +201,17 @@ HEADER PRIMARY PAGE NAVIGATION
 .site-nav span { font-weight: 700; }
 
 .site-nav p {
+	letter-spacing: .02em;
 	position: absolute;
-	top: 78px;
+	top: 75px;
 	left: 65px;
-	font-size: .95em;
+	font-size: .8em;
 }
 
 /*====== PRIMARY NAV ========*/
 
 .site-nav nav {
-	float: right;
+	text-align: right;
 	line-height: 120px;
 }
 
@@ -222,26 +228,118 @@ HEADER PRIMARY PAGE NAVIGATION
 HERO 
 \*==============================*/
 
+.hero { height: 1014px; position: relative; }
+/* this relevant to its parent - need to add fixed */
+/* heights to restablish original content flow position */
 
+.hero-description {
+	color: #fff;
+	float: right;
+	font-weight: 400;
+	padding-top: 45%;
+	text-transform: capitalize;
+	width: 45%;
+}
 
+.hero-description p {
+	font-size: 2.1em;
+	line-height: 1.3em;
+	padding-bottom: 1em;
+}
 
+.hero-description button {
+	background: transparent;
+	border: 2px solid #fff;
+	border-radius: 5px;
+	height: 60px;
+	margin: 8px;
+	width: 210px;
+}
+
+.hero > p {
+	position: absolute;
+	bottom: 30px;
+	color: #fff;
+	font-size: 2.1em;
+	text-align: center;
+	width: 100%;
+}
+
+.hero i {
+	border: 4px solid #fff;
+	border-radius: 50%;
+	margin: 0 6px;
+	padding: 6px 12px;
+}
 
 /*==============================*\
-RESET AND STYLES
+ARTICLE GENERAL STYLES
 \*==============================*/
 
+.article-main {
+	height: 877px;
+	padding-top: 96px;
+	width: 100%;
+}
 
+.article-main h2 {
+	text-align: center;
+	font-size: 2.4em;
+	font-weight: 400;
+	padding-bottom: .8em;
+}
 
+.article-main p { font-size: 1.375em; margin-top: .75em; }
 
+/*==============================*\
+SECTION - OUR SERVICES
+\*==============================*/
 
+.our-services {
+	position: relative;
+	text-align: center;
+}
 
+.our-services i {
+	line-height: 1.9em;
+	vertical-align: middle;
+}
 
+.our-services hr {
+	border-top: 3px solid rgba(117, 117, 117, 0.3);
+	display: inline-block;
+	vertical-align: middle;
+	width: 15%;
+}
 
+.our-services li > p { font-size: .95em; }
 
+.our-services li {
+	box-sizing: border-box;
+	display: inline-block;
+	float: left;
+	padding: 1.75em;
+	width: 25%;
+}
 
+.our-services li > i {
+	border: 3px solid red;
+	margin: .75em;
+	height: 54px;
+	width: 54px;
+}
 
+.our-services li > h3 {
+	font-size: 1.4em;
+	padding-bottom: 1.375em;
+}
 
-
+.our-services li > hr {
+	display: block;
+	margin: 0 auto 1.375em;;
+	width: 12.5%;
+	border: 3px solid red;
+}
 
 /*==============================*\
 RESET AND STYLES
