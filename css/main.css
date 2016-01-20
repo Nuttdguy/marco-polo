@@ -2,7 +2,7 @@
 RESET AND GENERAL PAGE STYLES
 \*==============================*/
 
-*, *:before, *:after, body, h1, h2, h3, h4, p, ul, ol { margin: 0; padding: 0; }
+*, *:before, *:after, body, h1, h2, h3, h4, p, ul, ol, input, form, li, a, div, aside, article, img, footer, section { margin: 0; padding: 0; border: 0; }
 
 html { box-sizing: border-box; height: 100%, width: 100%; }
 
@@ -91,25 +91,56 @@ BACKGROUND CONTAINERS
 CONTAINER MAIN BODY
 \*==============================*/
 
-.container-main { width: 1196px; }
+.container-main { width: 1196px; margin: 0 auto; padding: 0 1em; }
 
 
 /*==============================*\
 BG-1 UL CONTENT
 \*==============================*/
 
+.phone,
+.social {
+	color: #fff;
+	line-height: 44px;
+	position: relative;
+	z-index: 110;
+}
 
+.phone li,
+.social li {
+	display: inline-block;
+}
 
+.phone { float: left; }
 
+.phone i { vertical-align: middle; }
 
+.phone li { padding-right: 24px; }
 
+.social {
+	float: right;
+}
 
+.fa-search {
+	position: absolute;
+	left: 6px;
+	transform: translateY(85%);
+}
 
+.social input {
+	background-color: transparent;
+	border: 1px solid #fff;
+	padding: 4px 0 4px 30px;
+}
 
-
-
-
-
+.social i:not(.fa-search) {
+	height: 27px;
+	line-height: 27px;
+	margin: 2px;
+	text-align: center;
+	vertical-align: middle;
+	width: 24px;
+}
 
 /*==============================*\
 RESET AND STYLES
