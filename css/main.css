@@ -1,0 +1,270 @@
+/*==============================*\
+RESET AND GENERAL PAGE STYLES
+\*==============================*/
+
+*, *:before, *:after, body, h1, h2, h3, h4, p, ul, ol { margin: 0; padding: 0; }
+
+html { box-sizing: border-box; height: 100%, width: 100%; }
+
+body { position: relative; font: 400 16px/16px sans-serif; }
+
+li { list-style: none; }
+
+a { text-decoration: none; color: #757575;}
+
+/*==================================\
+GRID COL CONTAINER WIDTHS
+\*=================================*/
+
+.row { width: 100%; }
+
+.col-1 { width: 8.33%; }
+.col-2 { width: 16.66%; }
+.col-3 { width: 25.00%; }
+.col-4 { width: 33.33%; }
+.col-5 { width: 41.66%; }
+.col-6 { width: 50.00%; }
+.col-7 { width: 58.33%; }
+.col-8 { width: 66.66%; }
+.col-9 { width: 75.00%; }
+.col-10 { width: 83.33%; }
+.col-11 { width: 91.66%; }
+
+/*==================================\
+CLEAR FIX 
+\*=================================*/
+
+.cf:before, .cf:after { content: " "; display: table; }
+
+.cf:after { clear: both; }
+
+.cf { zoom: 1; }
+
+/*==============================*\
+BACKGROUND CONTAINERS
+\*==============================*/
+
+.bg { width: 100%; z-index: -1; position: absolute; }
+
+.bg-nav { width: 100%; z-index: 100; position: fixed; }
+
+.bg-1 {
+	background-color: #2d3e50;
+	height: 44px;
+}
+
+.bg-2 {
+	background: #fff;
+	top: 44px;
+	height: 120px;
+	box-shadow: 1px 2px 3px rgba(85, 85, 85, 0.49);
+}
+
+.bg-3 {
+	background-color: #ececec;
+	height: 897px;
+	top: 1014px;
+}
+
+.bg-4 {
+	background-color: #e64054;
+	height: 1510px;
+	top: 2556px;
+}
+
+.bg-5 {
+	background-color: #1e1a1b;
+	height: 487px;
+	position: absolute; 
+	top: 4954px;
+}
+
+.bg-6 {
+	background-color: #000;
+	height: 118px;
+	position: absolute; 
+	top: 5441px;
+}
+
+
+/*==============================*\
+CONTAINER MAIN BODY
+\*==============================*/
+
+.container-main { width: 1196px; }
+
+
+/*==============================*\
+BG-1 UL CONTENT
+\*==============================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*==============================*\
+RESET AND STYLES
+\*==============================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*==============================*\
+RESET AND STYLES
+\*==============================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*==============================*\
+RESET AND STYLES
+\*==============================*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*==============================*\
+RESET AND STYLES
+\*==============================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*==============================*\
+RESET AND STYLES
+\*==============================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*==============================*\
+RESET AND STYLES
+\*==============================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*==============================*\
+RESET AND STYLES
+\*==============================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*==============================*\
+RESET AND STYLES
+\*==============================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*==============================*\
+RESET AND STYLES
+\*==============================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*==============================*\
+RESET AND STYLES
+\*==============================*/
