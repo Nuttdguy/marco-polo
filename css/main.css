@@ -2,9 +2,9 @@
 RESET AND GENERAL PAGE STYLES
 \*==============================*/
 
-*, *:before, *:after, body, h1, h2, h3, h4, p, ul, ol, input, form, li, a, div, aside, article, img, footer, section { margin: 0; padding: 0; border: 0; }
+*, *:before, *:after, body, h1, h2, h3, h4, p, ul, ol, input, form, li, a, div, aside, article, img, footer, section { margin: 0; padding: 0; border: 0; box-sizing: border-box;}
 
-html { box-sizing: border-box; height: 100%, width: 100%; }
+html { height: 100%, width: 100%; }
 
 body { position: relative; font: 400 16px/16px Lato; }
 
@@ -77,12 +77,14 @@ BACKGROUND CONTAINERS
 	background-color: #ececec;
 	height: 897px;
 	top: 1014px;
+	border: 1px solid red;
 }
 
 .bg-4 {
 	background-color: #e64054;
 	height: 1510px;
 	top: 2556px;
+	border: 1px solid red;
 }
 
 .bg-5 {
@@ -276,27 +278,30 @@ HERO
 ARTICLE GENERAL STYLES
 \*==============================*/
 
-.article-main {
-	height: 877px;
-	padding-top: 96px;
-	width: 100%;
-}
-
 .article-main h2 {
 	text-align: center;
 	font-size: 2.4em;
 	font-weight: 400;
-	padding-bottom: .8em;
+	padding-top: 96px;
+	padding-bottom: 1em;
+	text-transform: capitalize;
 }
 
 .article-main p { font-size: 1.375em; margin-top: .75em; }
+
+.article-main hr {
+	border-top: 3px solid rgba(117, 117, 117, 0.3);
+	display: inline-block;
+	vertical-align: middle;
+	width: 15%;
+}
 
 /*==============================*\
 SECTION - OUR SERVICES
 \*==============================*/
 
 .our-services {
-	position: relative;
+	height: 897px;
 	text-align: center;
 }
 
@@ -305,20 +310,12 @@ SECTION - OUR SERVICES
 	vertical-align: middle;
 }
 
-.our-services hr {
-	border-top: 3px solid rgba(117, 117, 117, 0.3);
-	display: inline-block;
-	vertical-align: middle;
-	width: 15%;
-}
-
-.our-services li > p { font-size: .95em; }
+.our-services li > p { font-size: .9em; line-height: 1.4em; }
 
 .our-services li {
-	box-sizing: border-box;
 	display: inline-block;
 	float: left;
-	padding: 1.75em;
+	padding: 1.5em;
 	width: 25%;
 }
 
@@ -332,32 +329,78 @@ SECTION - OUR SERVICES
 .our-services li > h3 {
 	font-size: 1.4em;
 	padding-bottom: 1.375em;
+	text-transform: capitalize;
 }
 
 .our-services li > hr {
-	display: block;
-	margin: 0 auto 1.375em;;
-	width: 12.5%;
+	margin: 0 auto 1.375em;
 	border: 3px solid red;
 }
 
 /*==============================*\
-RESET AND STYLES
+SECTION - FEATURED WORK 
 \*==============================*/
 
+.featured-work {
+	height: 645px;
+	position: relative;
+	text-align: center;
+}
 
+.featured-work p {
+	width: 80%;
+	line-height: 28px;
+	margin: 28px auto;
+}
 
+.featured-work li { display: inline-block; }
 
+.fwork {
+	height: 250px;
+	position: absolute;
+	top: 2208px;
+}
 
+.fwork li {
+	background-size: cover;
+	display: inline-block;
+	height: 250px;
+	float: left;
+	max-height: 300px;
+	width: 20%;
+}
 
+.fwork-1 { background: url(../img/Marco-Polo_02.png) center center no-repeat; }
+.fwork-2 { background: url(../img/Marco-Polo_03.png) center center no-repeat;; }
+.fwork-3 { background: url(../img/Marco-Polo_04.png) center center no-repeat;; }
+.fwork-4 { background: url(../img/Marco-Polo_05.png) center center no-repeat;; }
+.fwork-5 { background: url(../img/Marco-Polo_06.png) center center no-repeat;; }
 
+.volumebar { position: relative; left: 20px;}
 
+.featured-work input {
+	background-color: #757575;
+	border-radius: 30px;
+	position: relative;
+	top: 295px;
+	width: 230px;
+	box-shadow: inset 2px 6px 8px #000;
+}
 
-
+.featured-work button {
+	background: #e64054;
+	border-radius: 50%;
+	border: 4px solid #3c4c5d;
+	position: relative;
+	width: 32px;
+	height: 32px;
+	top: 302px;
+	left: -180px;
+}
 
 
 /*==============================*\
-RESET AND STYLES
+SECTION - ABOUT US
 \*==============================*/
 
 
