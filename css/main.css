@@ -16,7 +16,7 @@ a { text-decoration: none; color: #757575;}
 GRID COL CONTAINER WIDTHS
 \*=================================*/
 
-.row { width: 100%; }
+.row { display: block; width: 100%; }
 
 .col-1 { width: 8.33%; }
 .col-2 { width: 16.66%; }
@@ -60,6 +60,19 @@ BACKGROUND CONTAINERS
 	box-shadow: 1px 2px 3px rgba(85, 85, 85, 0.49);
 }
 
+.bg-hero {
+	background: url(img/city.jpg);
+	height: 850px;
+	top: 164px;
+}
+
+.bg-hero .hero-overlay {
+	background: linear-gradient(to bottom, rgba(0,0,0,.1) 30%, rgba(64, 58, 75, 0.2) 46%, rgba(0, 0, 0, 0.3) 100%);
+	top: 0;
+	height: 850px;
+	z-index: 0;
+}
+
 .bg-3 {
 	background-color: #ececec;
 	height: 897px;
@@ -91,7 +104,12 @@ BACKGROUND CONTAINERS
 CONTAINER MAIN BODY
 \*==============================*/
 
-.container-main { width: 1196px; margin: 0 auto; padding: 0 1em; }
+.container-main { 
+	width: 1196px; 
+	margin: 0 auto; 
+	padding: 0 1em; 
+	border: 1px solid red; 
+}
 
 
 /*==============================*\
@@ -143,18 +161,66 @@ BG-1 UL CONTENT
 }
 
 /*==============================*\
-RESET AND STYLES
+HEADER PRIMARY PAGE NAVIGATION
 \*==============================*/
 
+/*====== MARCO POLO LOGO ========*/
 
+.site-nav {
+	height: 120px;
+	position: relative;
+	z-index: 110;
+}
 
+.site-nav-logo { position: relative; }
 
+.site-nav h1 {
+	color: #3c4c5d;
+	display: inline-block;
+	font-size: 2.4em;
+	font-weight: 300;
+	float: left;
+	letter-spacing: -.1em;
+	line-height: 120px;
+	text-transform: uppercase;
+}
 
+.site-nav h1:first-letter {
+	border: 5px solid #3c4c5d;
+	border-radius: 50%;
+	font-weight: 900;
+	padding: 0 12px 0 6px;
+	margin: 0 2px;
+}
 
+.site-nav span { font-weight: 700; }
 
+.site-nav p {
+	position: absolute;
+	top: 78px;
+	left: 65px;
+	font-size: .95em;
+}
 
+/*====== PRIMARY NAV ========*/
 
+.site-nav nav {
+	float: right;
+	line-height: 120px;
+}
 
+.site-nav li {
+	display: inline-block;
+}
+
+.site-nav a {
+	color: #757575;
+	padding: 8px 24px;
+}
+
+/*==============================*\
+HERO 
+\*==============================*/
 
 
 
