@@ -108,7 +108,6 @@ CONTAINER MAIN BODY
 	width: 1196px; 
 	margin: 0 auto; 
 	padding: 0 1em; 
-	border: 1px solid red; 
 }
 
 
@@ -682,24 +681,3 @@ SECTION - FOOTER
 
 .footer .last { border-right: none; }
 
-
-/*==============================*\
-RESET AND STYLES
-\*==============================*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*==============================*\
-RESET AND STYLES
-\*==============================*/
