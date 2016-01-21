@@ -371,10 +371,10 @@ SECTION - FEATURED WORK
 }
 
 .fwork-1 { background: url(../img/Marco-Polo_02.png) center center no-repeat; }
-.fwork-2 { background: url(../img/Marco-Polo_03.png) center center no-repeat;; }
-.fwork-3 { background: url(../img/Marco-Polo_04.png) center center no-repeat;; }
-.fwork-4 { background: url(../img/Marco-Polo_05.png) center center no-repeat;; }
-.fwork-5 { background: url(../img/Marco-Polo_06.png) center center no-repeat;; }
+.fwork-2 { background: url(../img/Marco-Polo_03.png) center center no-repeat; }
+.fwork-3 { background: url(../img/Marco-Polo_04.png) center center no-repeat; }
+.fwork-4 { background: url(../img/Marco-Polo_05.png) center center no-repeat; }
+.fwork-5 { background: url(../img/Marco-Polo_06.png) center center no-repeat; }
 
 .volumebar { position: relative; left: 20px;}
 
@@ -403,17 +403,28 @@ SECTION - FEATURED WORK
 SECTION - ABOUT US
 \*==============================*/
 
+.about-us {
+	color: #fff;
+	height: 900px;
+	text-align: center;
+}
 
+.about-us i { vertical-align: middle; }
 
+.about-us hr { border-color: #fff; }
 
+.about-us p {
+	letter-spacing: .05em;
+	margin: 1.375em 0 0 0;
+}
 
-
-
-
-
-
-
-
+.about-us video {
+	box-shadow: 5px 8px 12px rgba(36, 36, 36, 0.44);
+	height: 550px;
+	margin-top: 2.75em;
+	object-fit: fill;
+	width: 80%;
+}
 
 /*==============================*\
 RESET AND STYLES
