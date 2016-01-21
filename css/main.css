@@ -540,26 +540,130 @@ SECTION - BLOG
 }
 
 /*==============================*\
-RESET AND STYLES
+SECTION - INFO
 \*==============================*/
 
+/*========INFO-CONTACT==========*/
+
+.info {
+	color: #fff;
+	height: 487px;
+	font-size: .8rem;
+}
+
+.info section {
+	float: left;
+	width: 25%;
+}
+
+.info h2 { 
+	padding-top: 54px;
+	text-align: left;
+}
+
+.info-contact > i {
+	background: #292b2e;
+	border-radius: 50%;
+	line-height: 44px;
+	margin: 0 5px 16px;
+	text-align: center;
+	width: 44px;
+	height: 44px;
+}
+
+.info-contact p > i { color: red; padding: 4px 12px; }
+
+.info-contact p { font-size: 1rem;}
+
+.info-contact iframe {
+	margin-top: 44px;
+	width: 90%;
+}
+
+/*========INFO-TWEETS==========*/
+
+.info-tweets p {
+	line-height: 1.25rem;
+	font-size: .9rem;
+	margin: 0 0 14px;
+	padding: 0 24px 0 0 ;
+}
+
+.info-tweets span {
+	color: #757575;
+}
+
+/*========INFO-POSTS ==========*/
+
+.info-posts li {
+	float: left;
+	height: 90px;
+	margin-bottom: 27px;
+	width: 90px;
+}
+
+.info-posts li:nth-child(2n) {
+	width: 65%;
+}
+
+.info-posts p {	
+	margin: 0 0 10px 0;
+	padding: 0 8px;
+	line-height: 1.25rem;
+	font-size: .9rem;
+	width: 100%;
+}
+
+.info-posts p > span {
+	float: left;
+	margin: 0 12px 0 0;
+}
+
+.info-posts span > i {
+	color: red;
+}
+
+.post-avatar-1 {
+	background: url(../img/post-avatar-1.png) center center no-repeat;
+	background-size: cover;
+}
+
+.post-avatar-2 {
+	background: url(../img/post-avatar-2.png) center center no-repeat;
+	background-size: cover;
+}
+
+.post-avatar-3 {
+	background: url(../img/post-avatar-3.png) center center no-repeat;
+	background-size: cover;
+}
 
 
+/*========INFO-POST ==========*/
 
+.in-touch textarea {
+	background: #292b2e;
+	padding: 8px;
+	margin-bottom: 10px;
+	width: 270px;
+}
 
+.in-touch input {
+	background: #292b2e;
+	height: 40px;
+	padding: 8px;
+	width: 270px;
+	margin-bottom: 10px;
+}
 
-
-
-
-
-
-
-
-
-
+.in-touch button {
+	background: #f00;
+	height: 40px;
+	width: 270px;
+}
 
 /*==============================*\
-RESET AND STYLES
+SECTION - FOOTER 
 \*==============================*/
 
 
