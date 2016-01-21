@@ -49,11 +49,10 @@
 		</div>
 		
 		<header class="site-nav cf">
+<!-- container | main site heading and page navigation - chrome does not recognize html hidden boolean  -->
+			<h1>Marco<span> polo</span></h1>
+			<p>multipurpose corporate theme</p>
 			<nav>
-				<div class="site-nav-logo">
-					<h1>Marco<span> polo</span></h1>
-					<p>multipurpose corporate theme</p>
-				</div>
 				<ul>
 					<h2 hidden>Site navigation</h2>
 					<li><a href="#">Home</a></li>
@@ -66,9 +65,8 @@
 			</nav>
 		</header>
 		
-	
-	<main> 
 		<div class="hero cf">
+<!--	container and contents of hero section   -->
 			<div class="hero-description ">
 				<p>Best responsive theme for your business needs!</p>
 				<button>View features</button>
@@ -77,12 +75,16 @@
 			<p>Let's <i class="fa fa-angle-down"></i> Meet</p>
 		</div>
 	
+	<main> 
+<!--	sites main declaration for accessibility readers  -->
 		<article class="article-main cf">
 			<h1 hidden>Marco polo</h1>
-			<section class="our-services cf">
+<!--	article declaration | use h1 to define it as parent of sections that follow  and also to prevent an untiitled article from showing in HTML5 outline  -->
+			<section class="our-services">
+<!--	our services container | section   -->
 				<h2>Our services</h2>
 				<hr><i class="fa fa-wrench fa-lg"></i><hr>
-				<p>Check out our main services which we offer to every client</p>
+				<p class="article-subheading">Check out our main services which we offer to every client</p>
 				<ul>
 					<li>
 						<i class="fa fa-pencil fa-2x"></i>
@@ -136,26 +138,29 @@
 			</section>
 			
 			<section class="featured-work">
+<!--  featured work container | section   -->
 				<h2>Featured work</h2>
 				<hr><i class="fa fa-camera fa-lg"></i><hr>
-				<p>We do quality work for our clients that make them unique, Have a quick look at some of our recent work</p>
+				<p class="article-subheading" >We do quality work for our clients that make them unique, Have a quick look at some of our recent work</p>
 				<div class="volumebar ">
 					<input type="text">
 					<button></button>
 				</div>
 			</section>
 			
-			<section class="about-us cf">
+			<section class="about-us">
+<!--  about-us container | section  -->
 				<h2>About us</h2>
 				<hr> <i class="fa fa-building fa-2x"></i> <hr>
-				<p>Lets know about us, who we are and what we are doing since past years</p>
+				<p class="article-subheading" >Lets know about us, who we are and what we are doing since past years</p>
 				<video src="video/adlixir1.mp4" poster="video/poster-video.png" controls ></video>
 			</section>
 			
 			<section class="team">
+<!--  team container | section  -->
 				<h2>Meet our team</h2>
 				<hr> <i class="fa fa-users fa-lg"></i> <hr>
-				<p>Let's meet our creative team who are fill of creative mind, full of passion of uniqeness and much more. Get to know us.</p>
+				<p class="article-subheading" >Let's meet our creative team who are fill of creative mind, full of passion of uniqeness and much more. Get to know us.</p>
 				<ul class="team-avatar-profile">
 					<li class="team-avatar-1"><a href="#"></a></li>
 					<li class="team-avatar-2"><a href="#"></a></li>
@@ -171,9 +176,10 @@
 			</section>
 			
 			<section class="blog">
+<!--   blog container and section   -->
 				<h2>Our latest blog posts</h2>
 				<hr> <i class="fa fa-file"></i> <hr>
-				<p>See what's going on in our blog!</p>
+				<p class="article-subheading" >See what's going on in our blog!</p>
 				<ul class="blog-description">
 					<li>
 						<img src="img/blog-1.png" alt="an artistic gallery of drawings">
@@ -215,7 +221,9 @@
 			</section>
 			
 			<div class="info">
+<!--   container for bottom info sections  -->
 				<section class="info-contact">
+<!--   info-contact container | section  | could warrant use of aside rather than section -->
 					<h2>contact</h2>
 					<i class="fa fa-facebook"></i>
 					<i class="fa fa-twitter"></i>
@@ -227,6 +235,7 @@
 				</section>
 				
 				<section class="info-tweets">
+<!--   info-tweets container | section  | could warrant use of aside rather than section -->
 					<h2>Recent tweets</h2>
 					<p><i class="fa fa-twitter"></i> Sed laoreet velit urna, id pharetra enim imperdiet nec. Quisque conque, arcu mattis gravida tincidunt, felis risus laoreet. http://t.co.marco/tq.ckeyu <br> <span>about 26 days ago</span></p>
 					<p><i class="fa fa-twitter"></i> Sed laoreet velit urna, id pharetra enim imperdiet nec. Quisque conque, arcu mattis gravida tincidunt, felis risus laoreet. http://t.co.marco/tq.ckeyu <br> <span>about 26 days ago</span></p>
@@ -234,6 +243,7 @@
 				</section>
 				
 				<section class="info-posts">
+<!--   info-contact posts | section  | could warrant use of aside rather than section -->
 					<h2>Recent posts</h2>
 					<ul>
 						<li class="post-avatar-1"></li>
@@ -259,6 +269,7 @@
 				</section>
 				
 				<section class="in-touch">
+<!--   info-touch container | section  | could warrant use of aside rather than section -->
 					<h2>Get in touch</h2>
 					<form action="">
 						<textarea name="textarea" id="" cols="30" rows="10">Message</textarea>

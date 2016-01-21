@@ -6,7 +6,12 @@ RESET AND GENERAL PAGE STYLES
 
 html { height: 100%, width: 100%; }
 
-body { position: relative; font: 400 16px/16px Lato; }
+body { position: relative;  }
+/* ---- establish the base font size for the body ---- */
+
+h1, h2, h3, h4, h5, li, a, dl, dt, dd, i {
+	font: 300 16px/16px Lato;
+}
 
 li { list-style: none; }
 
@@ -120,11 +125,12 @@ BG-1 UL CONTENT
 	width: inherit;
 	z-index: 110;
 }
+/*----- em unit is 16px ----*/
 
 .phone,
 .social {
 	color: #fff;
-	line-height: 44px;
+	line-height: 2.75em;
 	position: relative;
 }
 
@@ -137,99 +143,93 @@ BG-1 UL CONTENT
 
 .phone i { vertical-align: middle; }
 
-.phone li { padding-right: 24px; }
+.phone li { padding-right: 1.5em; }
 
 .social { float: right; }
 
 .social .fa-search {
 	position: absolute;
-	left: 6px;
-	transform: translateY(85%);
+	left: .375em;
+	transform: translateY(50%);
 }
 
 .social input {
 	background-color: transparent;
 	border: 1px solid #fff;
-	padding: 4px 0 4px 30px;
+	padding: .25em 0 .25em 1.875em;
 }
 
 .social i:not(.fa-search) {
-	height: 27px;
-	line-height: 27px;
-	margin: 2px;
+	height: 1.6875em;
+	line-height: 1.6875em;
+	margin: .125em;
 	text-align: center;
 	vertical-align: middle;
-	width: 24px;
+	width: 1.5em;
 }
 
 /*==============================*\
 HEADER PRIMARY PAGE NAVIGATION
 \*==============================*/
 
-/*====== MARCO POLO LOGO ========*/
+/*====== MARCO POLO LOGO & PRIMARY NAV ========*/
 
 .site-nav {
-	height: 120px;
+	height: 7.5em;
 	position: fixed;
-	top: 44px;
+	top: 2.75em;
 	width: inherit;
 	z-index: 110;
 }
 
-.site-nav-logo { position: fixed; }
+.site-nav h1,
+.site-nav nav {
+	line-height: 120px;
+	text-align: right;
+}
 
 .site-nav h1 {
 	color: #3c4c5d;
-	display: inline-block;
-	font-size: 2.4em;
-	font-weight: 300;
 	float: left;
+	font-size: 2.4em;
+/*--- 16 * 2.4em = 38.4px --> all children inherit this value */
+	font-weight: 300;
 	letter-spacing: -.1em;
-	line-height: 118px;
 	text-transform: uppercase;
 }
 
 .site-nav h1:first-letter {
-	border: 5px solid #3c4c5d;
+	border: .1302em solid #3c4c5d;
+/*--- inherits directly from its h1 parent	*/
 	border-radius: 50%;
 	font-weight: 900;
-	padding: 0 12px 0 6px;
-	margin: 0 2px;
+	padding: 0 .3125em 0 .15625em;
+	margin: 0 .052em;
+}
+
+.site-nav p {
+	left: 5.0781em;
+	letter-spacing: .02em;
+	font-size: .8em;
+/*--- 1. defines the font-size of p element based of its parent; result is 12.8px 	*/
+	position: absolute;
+	top: 6.0937em;
+/*--- 2. then uses its font-size as the BASE em unit of measure  ---*/
 }
 
 .site-nav span { font-weight: 700; }
 
-.site-nav p {
-	letter-spacing: .02em;
-	position: absolute;
-	top: 75px;
-	left: 65px;
-	font-size: .8em;
-}
+.site-nav li { display: inline-block; }
 
-/*====== PRIMARY NAV ========*/
-
-.site-nav nav {
-	text-align: right;
-	line-height: 120px;
-}
-
-.site-nav li {
-	display: inline-block;
-}
-
-.site-nav a {
-	color: #757575;
-	padding: 8px 24px;
-}
+.site-nav a { color: #757575;	padding: .5em 1.5em; }
+/*--- uses the site-nav BASE font-size; since its undefined, the root unit of 16px is used as the BASE ---*/
 
 /*==============================*\
 HERO 
 \*==============================*/
 
-.hero { height: 1014px; position: relative; }
-/* this relevant to its parent - need to add fixed */
-/* heights to restablish original content flow position */
+.hero { height: 63.375em; position: relative; }
+/*--- height of HERO container is 850px. However requires 164px of additional space to account for the fixed nav containers */
 
 .hero-description {
 	color: #fff;
@@ -242,33 +242,36 @@ HERO
 
 .hero-description p {
 	font-size: 2.1em;
+  /*--- this defines this element to a BASE font size of 33.6px ---*/
 	line-height: 1.3em;
+  /*--- converts to 44.68px	*/
 	padding-bottom: 1em;
 }
 
 .hero-description button {
 	background: transparent;
-	border: 2px solid #fff;
-	border-radius: 5px;
-	height: 60px;
-	margin: 8px;
-	width: 210px;
+	border: .125em solid #fff;
+	border-radius: .3125em;
+	height: 3.75em;
+	margin: .5em;
+	width: 13.125em;
 }
 
 .hero > p {
-	position: absolute;
-	bottom: 30px;
+	bottom: .8928em;
 	color: #fff;
 	font-size: 2.1em;
+	/*--- this defines this element to a BASE font size of 33.6px ---*/
+	position: absolute;
 	text-align: center;
 	width: 100%;
 }
 
 .hero i {
-	border: 4px solid #fff;
+	border: .119em solid #fff;
 	border-radius: 50%;
-	margin: 0 6px;
-	padding: 6px 12px;
+	margin: 0 .1785em;
+	padding: .1785em .3571em;
 }
 
 /*==============================*\
@@ -276,18 +279,28 @@ ARTICLE GENERAL STYLES
 \*==============================*/
 
 .article-main h2 {
-	text-align: center;
 	font-size: 2.4em;
+  /*-- DEFINES ALL H2 ELEMENTS TO HAVE A BASE PIXEL MEASURE OF 38.4 ---*/
 	font-weight: 400;
-	padding-top: 96px;
+	padding-top: 2.60em;
+	padding-bottom: 1.3177em;
+	text-transform: capitalize;
+}
+
+.article-main h3 {
+	font-size: 1.4em;
+	line-height: 1.5em;
 	padding-bottom: 1em;
 	text-transform: capitalize;
 }
 
-.article-main p { font-size: 1.375em; margin-top: .75em; }
+.article-main p { font-size: 1.375em;}
+
+.article-subheading { margin: 1.1em auto 0; }
+/*--- This is defining the BASE font-size of ALL p elements WITHIN ATRICLE is 22 px*/
 
 .article-main hr {
-	border-top: 3px solid rgba(117, 117, 117, 0.3);
+	border-top: .1875em solid rgba(117, 117, 117, 0.3);
 	display: inline-block;
 	vertical-align: middle;
 	width: 15%;
@@ -298,35 +311,27 @@ SECTION - OUR SERVICES
 \*==============================*/
 
 .our-services {
-	height: 897px;
+	height: 56.0625em;
 	text-align: center;
 }
 
-.our-services i {
-	line-height: 54px;
-	vertical-align: middle;
+.our-services li > i {
+	border: 3px solid red;
+	line-height: 1.40625em;
+	margin: .75em;
+	width: 1.40625em;
 }
 
-.our-services li > p { font-size: .9em; line-height: 1.4em; }
+.our-services li > p { 
+	font-size: .9em; 
+	line-height: 1.4em; 
+}
 
 .our-services li {
 	display: inline-block;
 	float: left;
 	padding: 1.5em;
 	width: 25%;
-}
-
-.our-services li > i {
-	border: 3px solid red;
-	margin: .75em;
-	height: 54px;
-	width: 54px;
-}
-
-.our-services li > h3 {
-	font-size: 1.4em;
-	padding-bottom: 1.375em;
-	text-transform: capitalize;
 }
 
 .our-services li > hr {
@@ -339,31 +344,30 @@ SECTION - FEATURED WORK
 \*==============================*/
 
 .featured-work {
-	height: 645px;
+	height: 40.3125em;
 	position: relative;
 	text-align: center;
 }
 
 .featured-work p {
 	width: 80%;
-	line-height: 28px;
-	margin: 28px auto;
+	line-height: 1.75em;
 }
 
 .featured-work li { display: inline-block; }
 
 .fwork {
-	height: 250px;
+	height: 15.625em;
 	position: absolute;
-	top: 2208px;
+	top: 138em;
 }
 
 .fwork li {
 	background-size: cover;
 	display: inline-block;
-	height: 250px;
+	height: 15.625em;
 	float: left;
-	max-height: 300px;
+	max-height: 18.75em;
 	width: 20%;
 }
 
@@ -373,14 +377,14 @@ SECTION - FEATURED WORK
 .fwork-4 { background: url(../img/Marco-Polo_05.png) center center no-repeat; }
 .fwork-5 { background: url(../img/Marco-Polo_06.png) center center no-repeat; }
 
-.volumebar { position: relative; left: 20px;}
+.volumebar { position: relative; left: 1.25em;}
 
 .featured-work input {
 	background-color: #757575;
-	border-radius: 30px;
+	border-radius: 1.875em;
 	position: relative;
-	top: 295px;
-	width: 230px;
+	top: 18.4375em;
+	width: 14.375em;
 	vertical-align: middle;
 	box-shadow: inset 2px 6px 8px #000;
 }
@@ -388,12 +392,12 @@ SECTION - FEATURED WORK
 .featured-work button {
 	background: #e64054;
 	border-radius: 50%;
-	border: 4px solid #3c4c5d;
+	border: .25em solid #3c4c5d;
 	position: relative;
-	width: 32px;
-	height: 32px;
-	top: 295px;
-	left: -180px;
+	width: 2em;
+	height: 2em;
+	top: 18.4375em;
+	left: -11.25em;
 	vertical-align: middle;
 }
 
@@ -404,7 +408,7 @@ SECTION - ABOUT US
 
 .about-us {
 	color: #fff;
-	height: 900px;
+	height: 56.25em;
 	text-align: center;
 }
 
@@ -412,15 +416,12 @@ SECTION - ABOUT US
 
 .about-us hr { border-color: #fff; }
 
-.about-us p {
-	letter-spacing: .05em;
-	margin: 1.375em 0 0 0;
-}
+.about-us p { letter-spacing: .05em; }
 
 .about-us video {
 	box-shadow: 5px 8px 12px rgba(36, 36, 36, 0.44);
-	height: 550px;
-	margin-top: 2.75em;
+	height: 34.375em;
+	margin-top: 2.5em;
 	object-fit: fill;
 	width: 80%;
 }
@@ -431,7 +432,7 @@ RESET AND STYLES
 
 .team {
 	color: #fff;
-	height: 610px;
+	height: 38.125em;
 	text-align: center;
 }
 
@@ -441,9 +442,9 @@ RESET AND STYLES
 
 .team > p {
 	line-height: 1.375em;
-	margin: 1.375em auto 0;
-	padding-bottom: 36px;
-	width: 70%;
+	padding-bottom: 1.63em;
+  /*	inherits from p element of article | 1.375em  */
+	width: 72%;
 }
 
 .team-avatar-profile { 
@@ -454,16 +455,11 @@ RESET AND STYLES
 
 .team-avatar-profile li,
 .team-avatar-description li {
-	border: 1em solid transparent;
+	border: 16px solid transparent;
 	display: block;
 	float: left;
 	height: inherit;
 	width: 25%;
-}
-
-.team h3, 
-.team li > p {
-	display: block;
 }
 
 .team-avatar-1 { 
@@ -486,7 +482,7 @@ RESET AND STYLES
 	background-size: cover; 
 }
 
-.team-avatar-description h3 { font-size: 1.5em; }
+.team-avatar-description h3 { font-size: 1.5em; padding-bottom: 0;}
 
 .team-avatar-description p { font-size: 1em; }
 
@@ -495,15 +491,18 @@ RESET AND STYLES
 SECTION - BLOG
 \*==============================*/
 
-.blog { height: 885px; text-align: center; }
+.blog { height: 55.3125em; text-align: center; }
 
-.blog h2 { padding-top: 60px; }
+.blog h2 { padding-top: 1.5625em; }
+/*-- Begins with a starting font-size of 38.4 px | defined in article-main ---*/
 
-.blog > p { margin: 1.375em 0 2.75rem 0; } 
+.blog-description hr { border-color: #f00; }
 
-.blog-description hr { border-color: #ff0000; }
-
-.blog-description { text-align: left; height: 668px;}
+.blog-description { 
+	height: 41.75em;
+	margin-top: 1.625em;
+	text-align: left; 
+}
 
 .blog-description li {
 	display: block;
@@ -511,31 +510,39 @@ SECTION - BLOG
 	width: 33.33%;
 }
 
-.blog-description img { max-height: 400px; }
+.blog-description img { max-height: 25em; }
 
-.blog-description h3 { 
-	padding: 1rem 0; 
-	font-size: 1.35em;
+.blog-description h3 {
+	padding: .75em 0; 
 	text-transform: capitalize;
 }
 
 .blog-description p {
-	margin: 4px 0;
-	padding: 0 .5em .5em 0;
 	font-size: 1em;
+	line-height: 1.25em;
+	margin: .25em 0;
+	padding: 0 .5em .5em 0;
 }
 
-.blog-description dl { width: 50%; line-height: 1.3em; float: left;}
+.blog-description dl { 
+	float: left;
+	width: 50%; 
+}
+
+.blog-description dt,
+.blog-description dd {
+	line-height: 1.25em;
+}
 
 .blog-description button {
 	background: red;
-	height: 50px;
-	float: right;
 	color: #fff;
-	margin-top: 8px;
-	margin-right: 21px;
+	float: right;
+	height: 3.125em;
+	margin-top: .5em;
+	margin-right: 1.3125em;
 	text-transform: capitalize;
-	width: 168px;
+	width: 10.5em;
 }
 
 /*==============================*\
@@ -546,8 +553,7 @@ SECTION - INFO
 
 .info {
 	color: #fff;
-	height: 487px;
-	font-size: .8rem;
+	height: 30.4375em;
 }
 
 .info section {
@@ -555,37 +561,42 @@ SECTION - INFO
 	width: 25%;
 }
 
-.info h2 { 
-	padding-top: 54px;
-	text-align: left;
+.info h2 {
+	font-size: 1.625em;
+	padding-top: 2.07em;
 }
 
 .info-contact > i {
 	background: #292b2e;
 	border-radius: 50%;
-	line-height: 44px;
-	margin: 0 5px 16px;
+	line-height: 2.75em;
+	margin: 0 .3125em 1em;
 	text-align: center;
-	width: 44px;
-	height: 44px;
+	width: 2.75em;
+	height: 2.75em;
 }
 
-.info-contact p > i { color: red; padding: 4px 12px; }
+.info-contact p > i { 
+	color: red; 
+	padding: .25em .75em; 
+}
 
-.info-contact p { font-size: 1rem;}
+.info-contact p { 
+	font-size: 1em;
+}
 
 .info-contact iframe {
-	margin-top: 44px;
+	margin-top: 2.75em;
 	width: 90%;
 }
 
 /*========INFO-TWEETS==========*/
 
 .info-tweets p {
-	line-height: 1.25rem;
-	font-size: .9rem;
-	margin: 0 0 14px;
-	padding: 0 24px 0 0 ;
+	line-height: 1.3em;
+	font-size: .9em;
+	margin: 0 0 1.02em;
+	padding: 0 1.66em 0 0 ;
 }
 
 .info-tweets span {
@@ -596,9 +607,9 @@ SECTION - INFO
 
 .info-posts li {
 	float: left;
-	height: 90px;
-	margin-bottom: 27px;
-	width: 90px;
+	height: 5.625em;
+	margin-bottom: 1.4em;
+	width: 5.625em;
 }
 
 .info-posts li:nth-child(2n) {
@@ -606,16 +617,16 @@ SECTION - INFO
 }
 
 .info-posts p {	
-	margin: 0 0 10px 0;
-	padding: 0 8px;
-	line-height: 1.25rem;
+	margin: 0 0 .75em 0;
+	padding: 0 .5em;
+	line-height: 1.4em;
 	font-size: .9rem;
 	width: 100%;
 }
 
 .info-posts p > span {
 	float: left;
-	margin: 0 12px 0 0;
+	margin: 0 .75em 0 0;
 }
 
 .info-posts span > i {
@@ -640,25 +651,22 @@ SECTION - INFO
 
 /*========INFO-POST ==========*/
 
-.in-touch textarea {
-	background: #292b2e;
-	padding: 8px;
-	margin-bottom: 10px;
-	width: 270px;
-}
-
+.in-touch textarea,
 .in-touch input {
 	background: #292b2e;
-	height: 40px;
-	padding: 8px;
-	width: 270px;
-	margin-bottom: 10px;
+	margin-bottom: .625em;
+	padding: .5em;
+	width: 16.875em;
+}
+
+.in-touch textarea {
+	height: 10.625em;
 }
 
 .in-touch button {
 	background: #f00;
-	height: 40px;
-	width: 270px;
+	height: 2.5em;
+	width: 16.875em;
 }
 
 /*==============================*\
@@ -671,13 +679,22 @@ SECTION - FOOTER
 	width: 100%;
 }
 
-.footer p { display: inline-block; line-height: 118px; }
+.footer p, 
+.footer li {
+	display: inline-block;
+	line-height: 118px;
+}
 
-.footer ul { float: right; line-height: 118px; }
+.footer ul { 
+	float: right; 
+}
 
-.footer li { float: left; }
+.footer a {  
+	color: #fff; 
+	padding: 0 .75em; 
+	border-right: 1px solid #fff; }
 
-.footer a {  color: #fff; padding: 0 12px; border-right: 1px solid #fff; }
-
-.footer .last { border-right: none; }
+.footer .last { 
+	border-right: none; 
+}
 
