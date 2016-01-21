@@ -666,18 +666,21 @@ SECTION - INFO
 SECTION - FOOTER 
 \*==============================*/
 
+.footer {
+	color: #fff;
+	text-transform: capitalize;
+	width: 100%;
+}
 
+.footer p { display: inline-block; line-height: 118px; }
 
+.footer ul { float: right; line-height: 118px; }
 
+.footer li { float: left; }
 
+.footer a {  color: #fff; padding: 0 12px; border-right: 1px solid #fff; }
 
-
-
-
-
-
-
-
+.footer .last { border-right: none; }
 
 
 /*==============================*\
