@@ -77,14 +77,12 @@ BACKGROUND CONTAINERS
 	background-color: #ececec;
 	height: 897px;
 	top: 1014px;
-	border: 1px solid red;
 }
 
 .bg-4 {
 	background-color: #e64054;
 	height: 1510px;
 	top: 2556px;
-	border: 1px solid red;
 }
 
 .bg-5 {
@@ -494,24 +492,52 @@ RESET AND STYLES
 .team-avatar-description p { font-size: 1em; }
 
 
-
 /*==============================*\
-RESET AND STYLES
+SECTION - BLOG
 \*==============================*/
 
+.blog { height: 885px; text-align: center; }
 
+.blog h2 { padding-top: 60px; }
 
+.blog > p { margin: 1.375em 0 2.75rem 0; } 
 
+.blog-description hr { border-color: #ff0000; }
 
+.blog-description { text-align: left; height: 668px;}
 
+.blog-description li {
+	display: block;
+	float: left;
+	width: 33.33%;
+}
 
+.blog-description img { max-height: 400px; }
 
+.blog-description h3 { 
+	padding: 1rem 0; 
+	font-size: 1.35em;
+	text-transform: capitalize;
+}
 
+.blog-description p {
+	margin: 4px 0;
+	padding: 0 .5em .5em 0;
+	font-size: 1em;
+}
 
+.blog-description dl { width: 50%; line-height: 1.3em; float: left;}
 
-
-
-
+.blog-description button {
+	background: red;
+	height: 50px;
+	float: right;
+	color: #fff;
+	margin-top: 8px;
+	margin-right: 21px;
+	text-transform: capitalize;
+	width: 168px;
+}
 
 /*==============================*\
 RESET AND STYLES
