@@ -18,7 +18,10 @@ h1, h2, h3, h4, h5, li, a, dl, dt, dd, i {
 
 li { list-style: none; }
 
-a { text-decoration: none; color: #757575;}
+a { 
+	text-decoration: none; 
+	color: #757575;
+}
 
 /*==================================\
 GRID COL CONTAINER WIDTHS
@@ -118,19 +121,53 @@ BACKGROUND CONTAINERS
 }
 
 /*==============================*\
-CHANGABLE ELEMENTS STATES
+ENGLISH MENU 
 \*==============================*/
+
+.menu-container {
+	position: fixed;
+	top: 0;
+	z-index: 120;
+}
+
+.menu-container p,
+.menu-container label {
+	color: #fff;
+	display: inline-block;
+	width: 150px;
+}
 
 .lang-menu {
 	z-index: 108;
 	color: #fff;
 	background-color: #1e1a1b;
-	margin-left: 12%;
+	margin-left: 150px;
 	position: fixed;
-	left: 21.8%;
-	transform: translateY(-100%);
+	top: -156px;
+/*	transform: translateY(-100%);*/
 	transition: all .8s ease-in-out;
 	width: 120px;
+}
+
+.container-main label {
+	position: fixed;
+	padding-left: 8px;
+	top: 12px;
+}
+
+.menu-container label > i {
+	padding-left: 8px;
+}
+
+#menu-toggle {
+	visibility: hidden;
+}
+
+#menu-toggle:checked + .lang-menu {
+	position: fixed;
+	margin-left: 150px;
+/*	transform: translateY(21px);*/
+	transform: translateY(100%);
 }
 
 .show-lang li {
@@ -140,28 +177,167 @@ CHANGABLE ELEMENTS STATES
 
 .show-lang li:hover {
 	background-color: red;
-	transition: background-color .6s;
+	transition: background-color .4s;
 }
 
-.container-main label {
+
+/*==============================*\
+LANGUAGE BAR - SOCIAL LINKS 
+\*==============================*/
+
+.social li:first-of-type:hover {
+	background: none;
+}
+
+.social li:hover {
+	background: red;
+	transition: all 0.6s;
+}
+
+
+/*==============================*\
+SITE NAV - DROP DOWM MENU
+\*==============================*/
+
+.site-nav-inner {
+	position: relative;
+	top: 0;
+}
+
+.site-nav-inner ul {
+	opacity: 0;
+	visibility: hidden;
+	text-align: left;
+	margin-top: 18px;
+	position: absolute;
+	top: 20px;
+	left: 0px;
+	width: 150%;
+}
+
+.site-nav-inner li {
+	background-color: #fff;
+	line-height: 1.4em;
+	width: 100%;
+}
+
+.site-nav ul > li {
+	padding: 12px;
+}
+
+.nav-home:hover ul,
+.nav-pages:hover ul,
+.nav-portfolio:hover ul,
+.nav-about:hover ul,
+.nav-pages:hover ul,
+.nav-blog:hover ul,
+.nav-contact:hover ul {
+	opacity: 1;
+	visibility: visible;
+	transition: all 0.6s ease-in-out;
+}
+
+.site-nav li:hover {
+	background-color: red;
+	transition: all 0.6s ease-in-out;
+}
+
+.site-nav a:hover {
 	color: #fff;
-	margin-left: 12%;
-	position: fixed;
-	left: 22%;
-	top: 12px;
-	z-index: 120;
+	transition: all 0.4s;
 }
 
-#menu-toggle {
+
+/*==============================*\
+HERO BUTTONS
+\*==============================*/
+
+.hero-description button:hover {
+	background: red;
+	transition: all 0.6s;
+}
+
+.fa-angle-down:hover {
+	border-color: red;
+	color: red;
+	transition: all 0.6s;
+}
+
+/*==============================*\
+FEATURED WORK VOLUME BAR
+\*==============================*/
+
+.volumebar { position: relative;}
+
+.featured-work input {
 	visibility: hidden;
 }
 
-#menu-toggle:checked + .lang-menu {
-	position: fixed;
-	margin-left: 12%;
-	transform: translateY(21px);
+.featured-work label {
+	background-color: #757575;
+	border-radius: 1.875em;
+	height: 20px;
+	position: relative;
+	top: 17.4375em;
+	left: .75em;
+	width: 14.375em;
+	vertical-align: middle;
+	box-shadow: inset 2px 6px 8px #000;
 }
 
+.featured-work label input {
+	width: 18%;
+}
+
+.featured-work button {
+	background: #e64054;
+	border-radius: 50%;
+	border: .25em solid #3c4c5d;
+	position: relative;
+	width: 2em;
+	height: 2em;
+	top: 17.4375em;
+	left: -13.25em;
+	transition: all .5s ease-in-out;
+	vertical-align: middle;
+}
+
+#volumebar:checked ~ button {
+	left: -16px;
+	transition: all .5s ease-in-out;
+}
+
+/*==============================*\
+BLOG BUTTONS HOVER EFFECTS
+\*==============================*/
+
+.blog button:hover {
+	background-color: #292b2e;
+	transition: all .6s;
+}
+
+/*==============================*\
+INFO SECTION BUTTONS HOVER EFFECTS
+\*==============================*/
+
+.info button:hover {
+	background-color: #292b2e;
+	transition: all .6s;
+}
+
+.info-contact > i:hover {
+	background-color: red;
+	transition: all .6s;
+}
+
+/*==============================*\
+FOOTER SECTION LINK HOVER EFFECTS
+\*==============================*/
+
+.footer a:hover {
+	color: red;
+	transition: all .6s;
+}
 
 /*==============================*\
 CONTAINER MAIN BODY
@@ -174,7 +350,6 @@ CONTAINER MAIN BODY
 	position: relative;
 }
 
-
 /*==============================*\
 BG-1 UL CONTENT
 \*==============================*/
@@ -182,7 +357,7 @@ BG-1 UL CONTENT
 .bg-1-navbar {
 	background-color: #2d3e50;
 	position: fixed;
-	top: -2px;
+	top: 0;
 	width: inherit;
 	z-index: 110;
 }
@@ -278,10 +453,13 @@ HEADER PRIMARY PAGE NAVIGATION
 
 .site-nav span { font-weight: 700; }
 
-.site-nav li { display: inline-block; }
+.site-nav li { 
+	display: inline-block;
+}
 
-.site-nav a { color: #757575;	padding: .5em 1.5em; }
-/*--- uses the site-nav BASE font-size; since its undefined, the root unit of 16px is used as the BASE ---*/
+.site-nav a {
+	padding: 12px;
+}
 
 /*==============================*\
 HERO 
@@ -365,7 +543,6 @@ ARTICLE GENERAL STYLES
 	width: 15%;
 }
 
-
 /*==============================*\
 SECTION - OUR SERVICES
 \*==============================*/
@@ -436,30 +613,6 @@ SECTION - FEATURED WORK
 .fwork-3 { background: url(../img/Marco-Polo_04.png) center center no-repeat; }
 .fwork-4 { background: url(../img/Marco-Polo_05.png) center center no-repeat; }
 .fwork-5 { background: url(../img/Marco-Polo_06.png) center center no-repeat; }
-
-.volumebar { position: relative; left: 1.25em;}
-
-.featured-work input {
-	background-color: #757575;
-	border-radius: 1.875em;
-	position: relative;
-	top: 18.4375em;
-	width: 14.375em;
-	vertical-align: middle;
-	box-shadow: inset 2px 6px 8px #000;
-}
-
-.featured-work button {
-	background: #e64054;
-	border-radius: 50%;
-	border: .25em solid #3c4c5d;
-	position: relative;
-	width: 2em;
-	height: 2em;
-	top: 18.4375em;
-	left: -11.25em;
-	vertical-align: middle;
-}
 
 
 /*==============================*\

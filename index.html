@@ -32,7 +32,6 @@
 	
 	<div class="container-main cf">
 <!--	Container for holding content of site and keep it center aligned  -->
-			
 				<input type="checkbox" id="menu-toggle">
 				<div class="lang-menu">
 						<ul class="show-lang">
@@ -42,14 +41,16 @@
 							<li>Chinese</li>
 						</ul>
 				</div>
+			<div class="menu-container">
+				<p class="phone"><i class="fa fa-mobile fa-2x"></i> 1-800-345-9822</p>
+				<label for="menu-toggle" >English <i class="fa fa-arrow-down"></i></label>
+			</div>
 				
 		<div class="bg-1-navbar cf">
 <!--		fixed top container for top phone and social bar  -->
-			<p class="phone"><i class="fa fa-mobile fa-2x"></i> 1-800-345-9822</p>
-			<label for="menu-toggle" >English <i class="fa fa-arrow-down"></i></label>
+
 			<ul class="social">
-				<li>
-					<input type="search" placeholder="Search the site..."><i class="fa fa-search"></i></li>
+				<li><input type="search" placeholder="Search the site..."><i class="fa fa-search"></i></li>
 				<li><i class="fa fa-facebook"></i></li>
 				<li><i class="fa fa-twitter"></i></li>
 				<li><i class="fa fa-linkedin"></i></li>
@@ -65,12 +66,54 @@
 			<nav>
 				<ul>
 					<h2 hidden>Site navigation</h2>
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Pages</a></li>
-					<li><a href="#">Portfolio</a></li>
-					<li><a href="#">About us</a></li>
-					<li><a href="#">Our blog</a></li>
-					<li><a href="#">Contact us</a></li>
+					<li class="site-nav-inner nav-home"><a href="#">Home</a>
+						<ul>
+							<li><a href="#">Home 1</a></li>
+							<li><a href="#">Home 2</a></li>
+							<li><a href="#">Home 3</a></li>
+							<li><a href="#">Home 4</a></li>
+						</ul>
+					</li>
+					<li class="site-nav-inner nav-pages"><a href="#">Pages</a>
+						<ul>
+							<li><a href="#">Pages 1</a></li>
+							<li><a href="#">Pages 2</a></li>
+							<li><a href="#">Pages 3</a></li>
+							<li><a href="#">Pages 4</a></li>
+						</ul>
+					</li>
+					<li class="site-nav-inner nav-portfolio"><a href="#">Portfolio</a>
+						<ul>
+							<li><a href="#">Portfolio 1</a></li>
+							<li><a href="#">Portfolio 2</a></li>
+							<li><a href="#">Portfolio 3</a></li>
+							<li><a href="#">Portfolio 4</a></li>
+						</ul>
+					</li>
+					<li class="site-nav-inner nav-about"><a href="#">About us</a>
+						<ul>
+							<li><a href="#">About 1</a></li>
+							<li><a href="#">About 2</a></li>
+							<li><a href="#">About 3</a></li>
+							<li><a href="#">About 4</a></li>
+						</ul>
+					</li>
+					<li class="site-nav-inner nav-blog"><a href="#">Our blog</a>
+						<ul>
+							<li><a href="#">Blog 1</a></li>
+							<li><a href="#">Blog 2</a></li>
+							<li><a href="#">Blog 3</a></li>
+							<li><a href="#">Blog 4</a></li>
+						</ul>
+					</li>
+					<li class="site-nav-inner nav-contact"><a href="#">Contact us</a>
+						<ul>
+							<li><a href="#">Contact 1</a></li>
+							<li><a href="#">Contact 2</a></li>
+							<li><a href="#">Contact 3</a></li>
+							<li><a href="#">Contact 4</a></li>
+						</ul>
+					</li>
 				</ul>
 			</nav>
 		</header>
@@ -152,8 +195,10 @@
 				<h2>Featured work</h2>
 				<hr><i class="fa fa-camera fa-lg"></i><hr>
 				<p class="article-subheading" >We do quality work for our clients that make them unique, Have a quick look at some of our recent work</p>
+				
 				<div class="volumebar ">
-					<input type="text">
+					<input type="checkbox" id="volumebar" >
+					<label for="volumebar"><input type="text" ></label>
 					<button></button>
 				</div>
 			</section>
