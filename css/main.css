@@ -104,15 +104,58 @@ BACKGROUND CONTAINERS
 	top: 5441px;
 }
 
+/*==============================*\
+CHANGABLE ELEMENTS STATES
+\*==============================*/
+
+.show-lang {
+	color: #fff;
+	background-color: #1e1a1b;
+	position: fixed;
+	top: -244px;
+	left: 25%;
+	transition: all .8s ease-in-out;
+	width: 120px;
+	z-index: 108;
+}
+
+.show-lang li {
+	line-height: 2em;
+	padding: 4px 6px 4px 10px;
+}
+
+.show-lang li:hover {
+	background-color: red;
+	transition: background-color .6s;
+}
+
+.container-main label {
+	color: #fff;
+	padding-left: 25px;
+	position: relative;
+	top: 12px;
+	z-index: 120;
+}
+
+#menu-toggle {
+	visibility: hidden;
+}
+
+#menu-toggle:checked + .show-lang {
+	position: fixed;
+	top: 44px;
+}
+
 
 /*==============================*\
 CONTAINER MAIN BODY
 \*==============================*/
 
-.container-main { 
+.container-main {
 	width: 1196px; 
 	margin: 0 auto; 
-	padding: 0 1em; 
+	padding: 0 1em;
+	position: relative;
 }
 
 
@@ -121,7 +164,9 @@ BG-1 UL CONTENT
 \*==============================*/
 
 .bg-1-navbar {
+	background-color: #2d3e50;
 	position: fixed;
+	top: 0;
 	width: inherit;
 	z-index: 110;
 }
@@ -134,7 +179,7 @@ BG-1 UL CONTENT
 	position: relative;
 }
 
-.phone li,
+.phone,
 .social li {
 	display: inline-block;
 }
@@ -142,8 +187,6 @@ BG-1 UL CONTENT
 .phone { float: left; }
 
 .phone i { vertical-align: middle; }
-
-.phone li { padding-right: 1.5em; }
 
 .social { float: right; }
 
@@ -179,7 +222,7 @@ HEADER PRIMARY PAGE NAVIGATION
 	position: fixed;
 	top: 2.75em;
 	width: inherit;
-	z-index: 110;
+	z-index: 100;
 }
 
 .site-nav h1,
@@ -305,6 +348,7 @@ ARTICLE GENERAL STYLES
 	vertical-align: middle;
 	width: 15%;
 }
+
 
 /*==============================*\
 SECTION - OUR SERVICES
