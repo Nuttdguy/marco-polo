@@ -56,6 +56,7 @@ BACKGROUND CONTAINERS
 .bg-1 {
 	background-color: #2d3e50;
 	height: 44px;
+	width: 100%;
 }
 
 .bg-2 {
@@ -69,6 +70,7 @@ BACKGROUND CONTAINERS
 	background: url(img/city.jpg);
 	height: 850px;
 	top: 164px;
+	width: 100%;
 }
 
 .bg-hero .hero-overlay {
@@ -76,18 +78,21 @@ BACKGROUND CONTAINERS
 	top: 0;
 	height: 850px;
 	z-index: 0;
+	width: 100%;
 }
 
 .bg-3 {
 	background-color: #ececec;
 	height: 897px;
 	top: 1014px;
+	width: 100%;
 }
 
 .bg-4 {
 	background-color: #e64054;
 	height: 1510px;
 	top: 2556px;
+	width: 100%;
 }
 
 .bg-5 {
@@ -95,6 +100,7 @@ BACKGROUND CONTAINERS
 	height: 487px;
 	position: absolute; 
 	top: 4954px;
+	width: 100%;
 }
 
 .bg-6 {
@@ -102,6 +108,7 @@ BACKGROUND CONTAINERS
 	height: 118px;
 	position: absolute; 
 	top: 5441px;
+	width: 100%;
 }
 
 /*==============================*\
